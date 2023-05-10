@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A3ADDE6-D3DE-4FD8-B0D0-A5C1EC156BF1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FormView</RootNamespace>
+    <AssemblyName>FormView</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormViewGameScore.cs" />
+    <Compile Include="FormViewApps.cs" />
+    <Compile Include="FormViewGame.cs" />
+    <Compile Include="FormViewGameOver.cs" />
+    <Compile Include="FormViewInstruction.cs" />
+    <Compile Include="FormViewMenu.cs" />
+    <Compile Include="FormViewMenuHeading.cs" />
+    <Compile Include="FormViewMenuItem.cs" />
+    <Compile Include="FormViewRecordLine.cs" />
+    <Compile Include="FormViewRecords.cs" />
+    <Compile Include="Objects\Factories\FormViewGameObjectsFactory.cs" />
+    <Compile Include="Objects\FormViewBird.cs" />
+    <Compile Include="Objects\FormViewGameObject.cs" />
+    <Compile Include="Objects\FormViewPipe.cs" />
+    <Compile Include="Objects\FormViewWall.cs" />
+    <Compile Include="Output\FormViewOutput.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\Model\Model.csproj">
+      <Project>{91c22e2f-512f-4747-b7c5-b7ea6c45fd47}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\View\View.csproj">
+      <Project>{97d34c0b-a6f1-4c22-ae4f-2222065e18d9}</Project>
+      <Name>View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Void.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

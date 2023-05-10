@@ -1,0 +1,13 @@
+C:\Users\Leere\source\repos\FlappyBird\Base\View\bin\Release\View.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Base\View\bin\Release\View.dll
+C:\Users\Leere\source\repos\FlappyBird\Base\View\bin\Release\View.pdb
+C:\Users\Leere\source\repos\FlappyBird\Base\View\bin\Release\Model.dll
+C:\Users\Leere\source\repos\FlappyBird\Base\View\bin\Release\Model.pdb
+C:\Users\Leere\source\repos\FlappyBird\Base\View\bin\Release\Model.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Base\View\obj\Release\View.csproj.AssemblyReference.cache
+C:\Users\Leere\source\repos\FlappyBird\Base\View\obj\Release\View.Properties.Resources.resources
+C:\Users\Leere\source\repos\FlappyBird\Base\View\obj\Release\View.csproj.GenerateResource.cache
+C:\Users\Leere\source\repos\FlappyBird\Base\View\obj\Release\View.csproj.CoreCompileInputs.cache
+C:\Users\Leere\source\repos\FlappyBird\Base\View\obj\Release\View.csproj.CopyComplete
+C:\Users\Leere\source\repos\FlappyBird\Base\View\obj\Release\View.dll
+C:\Users\Leere\source\repos\FlappyBird\Base\View\obj\Release\View.pdb

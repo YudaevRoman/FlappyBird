@@ -1,0 +1,14 @@
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\Controller.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\Controller.dll
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\Controller.pdb
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\Model.dll
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\View.dll
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\Model.pdb
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\Model.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\View.pdb
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\bin\Release\View.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\obj\Release\Controller.csproj.AssemblyReference.cache
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\obj\Release\Controller.csproj.CoreCompileInputs.cache
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\obj\Release\Controller.csproj.CopyComplete
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\obj\Release\Controller.dll
+C:\Users\Leere\source\repos\FlappyBird\Base\Controller\obj\Release\Controller.pdb

@@ -1,0 +1,14 @@
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\ConsoleView.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\ConsoleView.dll
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\ConsoleView.pdb
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\Model.dll
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\View.dll
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\Model.pdb
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\Model.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\View.pdb
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\bin\Release\View.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\obj\Release\ConsoleView.csproj.AssemblyReference.cache
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\obj\Release\ConsoleView.csproj.CoreCompileInputs.cache
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\obj\Release\ConsoleView.csproj.CopyComplete
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\obj\Release\ConsoleView.dll
+C:\Users\Leere\source\repos\FlappyBird\Console\ConsoleView\obj\Release\ConsoleView.pdb

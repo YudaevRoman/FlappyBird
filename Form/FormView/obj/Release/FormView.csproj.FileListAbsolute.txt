@@ -1,0 +1,16 @@
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\FormView.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\FormView.dll
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\FormView.pdb
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\Model.dll
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\View.dll
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\Model.pdb
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\Model.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\View.pdb
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\bin\Release\View.dll.config
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\obj\Release\FormView.csproj.AssemblyReference.cache
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\obj\Release\FormView.Properties.Resources.resources
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\obj\Release\FormView.csproj.GenerateResource.cache
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\obj\Release\FormView.csproj.CoreCompileInputs.cache
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\obj\Release\FormView.csproj.CopyComplete
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\obj\Release\FormView.dll
+C:\Users\Leere\source\repos\FlappyBird\Form\FormView\obj\Release\FormView.pdb
