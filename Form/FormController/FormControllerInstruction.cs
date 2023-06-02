@@ -20,7 +20,9 @@ namespace FormController
         /// <summary>
         /// Запуск формы инструкции
         /// </summary>
-        public override void Start() { if (view is FormViewInstruction viewInstruction && model is ModelInstruction) viewInstruction.Show(); }
+        public override void Start() { 
+            if (view is FormViewInstruction viewInstruction && model is ModelInstruction) viewInstruction.Show(); 
+        }
         /// <summary>
         /// Обработчик нажатий клавишь
         /// </summary>

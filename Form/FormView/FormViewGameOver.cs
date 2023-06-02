@@ -1,4 +1,5 @@
 ﻿using FormView.Output;
+using Model;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -37,33 +38,18 @@ namespace FormView
         {
             while (isShowing)
             {
-                FormViewOutput.DrawStringInRect(text + "\nИмя: " + Name, 
-                    new StringFormat()
-                    {
-                        LineAlignment = StringAlignment.Near,
-                        Alignment = StringAlignment.Near
-                    }, 
-                    model.GetFullX(), model.GetFullY(), model.Width, model.Height, Color.Yellow);
+                if (model is ModelGameOver modelGameOver)
+                {
+                    FormViewOutput.DrawStringInRect(modelGameOver.Text + "\nСчёт: " + modelGameOver.Score + "\nИмя : " + Name,
+                        new StringFormat()
+                        {
+                            LineAlignment = StringAlignment.Near,
+                            Alignment = StringAlignment.Near
+                        },
+                        model.GetFullX(), model.GetFullY(), model.Width, model.Height, Color.Yellow);
+                }
                 FormViewOutput.ShowBuf();
                 Thread.Sleep(MILLISECONDS_TIMEOUT);
-            }
-        }
-        /// <summary>
-        /// Обработчик нажатий клавишь
-        /// </summary>
-        public void OnKey(object sender, KeyEventArgs key)
-        {
-            switch(key.KeyCode)
-            {
-                case Keys.Back:
-                    if(Name.Length != 0) Name = Name.Remove(Name.Length - 1, 1);
-                    break;
-                default:
-                    if (key.KeyValue > 0x40 && key.KeyValue < 0x5A)
-                    {
-                        Name = Name + ((char)key.KeyValue).ToString().ToLower();
-                    }
-                    break;
             }
         }
     }

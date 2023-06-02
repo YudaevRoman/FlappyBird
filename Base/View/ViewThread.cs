@@ -46,7 +46,7 @@ namespace View
         public void ExtraStop()
         {
             viewThread.Abort();
-            isShowing = false;
+            Stop();
         }
     }
 }

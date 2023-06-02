@@ -31,25 +31,29 @@ namespace FormController
         /// <summary>
         /// Обработчик нажатий клавишь
         /// </summary>
-        public void OnKey(object sender, KeyEventArgs key)
+        public void OnKey(object sender, KeyPressEventArgs key)
         {
             if (view is FormViewGameOver viewGameOver && model is ModelGameOver modelGameOver)
             {
-                switch (key.KeyCode)
+                switch (key.KeyChar)
                 {
-                    case Keys.Enter:
+                    case (char)13:
                         viewGameOver.Stop();
                         ModelRecords records = new ModelRecords(0, 0, 0, 0, model, 20);
                         string name = viewGameOver.Name;
-                        if (!records.Records.Exists(record => ((ModelRecordLine)record).Name == name && modelGameOver.Score == ((ModelRecordLine)record).Score))
-                        {
+                        if (!records.Records.Exists(record => 
+                        ((ModelRecordLine)record).Name == name && modelGameOver.Score == ((ModelRecordLine)record).Score)) {
                             records.Records.Add(new ModelRecordLine(0, 0, 0, 0, model, name, modelGameOver.Score));
                             records.WriteRecordsToFile();
                         }
                         OnClose();
                         break;
+                    case (char)8:
+                        if (viewGameOver.Name.Length != 0) 
+                            viewGameOver.Name = viewGameOver.Name.Remove(viewGameOver.Name.Length - 1, 1);
+                        break;
                     default:
-                        viewGameOver.OnKey(this, key);
+                        viewGameOver.Name = viewGameOver.Name + key.KeyChar;
                         break;
                 }
             }

@@ -77,7 +77,7 @@ namespace Model
             countY = (int)(Height / GameObjectsSize);
             if (countX * GameObjectsSize + GameObjectsSize > Width) countX--;
             if (countY * GameObjectsSize + GameObjectsSize > Height) countY--;
-            PipesFactory = new ModelPipesFactory((countX - 2) * GameObjectsSize, GameObjectsSize, this, GameObjectsSize);
+            PipesFactory = new ModelPipesFactory((countX - 2) * GameObjectsSize, GameObjectsSize, 0, 0, this, GameObjectsSize);
             score = new ModelGameScore(X + (int)(countX * 0.5) * GameObjectsSize, Y - GameObjectsSize, (int)(countX * 0.5) * GameObjectsSize, GameObjectsSize, parent, 0.ToString());
             Bird = new ModelBird((int)(countX * 0.15 ) * GameObjectsSize, (int)(countY * 0.5 ) * GameObjectsSize, GameObjectsSize, GameObjectsSize, this);
             Bird.Step = GameObjectsSize;

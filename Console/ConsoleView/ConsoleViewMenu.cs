@@ -35,12 +35,12 @@ namespace ConsoleView
                 ConsoleViewMenuHeading heading = new ConsoleViewMenuHeading(modelMenu.Heading);
                 while(isShowing)
                 {
+                    ConsoleViewOutput.CursorVisible(false);
                     ConsoleViewOutput.Clear();
                     heading.Show();
                     item.CurrentItem = modelMenu.CurrentItem;
                     item.ShowAll(modelMenu.Items);
                     ConsoleViewOutput.PrintOnConsole();
-                    Console.CursorVisible = false;
                     Thread.Sleep(MILLISECONDS_TIMEOUT);
                 }
             }

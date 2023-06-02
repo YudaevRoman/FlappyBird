@@ -39,7 +39,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Objects\Enum\ViewType.cs" />
     <Compile Include="Objects\ViewGameObject.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

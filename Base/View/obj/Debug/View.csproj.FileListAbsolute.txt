@@ -24,3 +24,16 @@ C:\Users\Leere\Desktop\FlappyBird\Base\View\obj\Debug\View.csproj.CoreCompileInp
 C:\Users\Leere\Desktop\FlappyBird\Base\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\Leere\Desktop\FlappyBird\Base\View\obj\Debug\View.dll
 C:\Users\Leere\Desktop\FlappyBird\Base\View\obj\Debug\View.pdb
+C:\FlappyBird\FlappyBird\Base\View\bin\Debug\View.dll.config
+C:\FlappyBird\FlappyBird\Base\View\bin\Debug\View.dll
+C:\FlappyBird\FlappyBird\Base\View\bin\Debug\View.pdb
+C:\FlappyBird\FlappyBird\Base\View\bin\Debug\Model.dll
+C:\FlappyBird\FlappyBird\Base\View\bin\Debug\Model.pdb
+C:\FlappyBird\FlappyBird\Base\View\bin\Debug\Model.dll.config
+C:\FlappyBird\FlappyBird\Base\View\obj\Debug\View.csproj.AssemblyReference.cache
+C:\FlappyBird\FlappyBird\Base\View\obj\Debug\View.Properties.Resources.resources
+C:\FlappyBird\FlappyBird\Base\View\obj\Debug\View.csproj.GenerateResource.cache
+C:\FlappyBird\FlappyBird\Base\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\FlappyBird\FlappyBird\Base\View\obj\Debug\View.csproj.CopyComplete
+C:\FlappyBird\FlappyBird\Base\View\obj\Debug\View.dll
+C:\FlappyBird\FlappyBird\Base\View\obj\Debug\View.pdb

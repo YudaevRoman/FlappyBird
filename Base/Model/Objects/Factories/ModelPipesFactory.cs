@@ -5,25 +5,13 @@ namespace Model.Objects.Factories
     /// <summary>
     /// Модель фабрики производства труб
     /// </summary>
-    public class ModelPipesFactory
+    public class ModelPipesFactory : Model
     {
         //Поля
         /// <summary>
-        /// Координата X позиции трубы фабрики
+        /// Размер игровых объектов
         /// </summary>
-        private int x;
-        /// <summary>
-        /// Координата Y позиции трубы фабрики
-        /// </summary>
-        private int y;
-        /// <summary>
-        /// Размер экхемпляров
-        /// </summary>
-        private int size;
-        /// <summary>
-        /// Модель родителя
-        /// </summary>
-        private Model parent;
+        public int gameObjectsSize { get; set; }
 
         //Генераторы
         /// <summary>
@@ -35,12 +23,9 @@ namespace Model.Objects.Factories
         /// <summary>
         /// Конструктор с заданными координатами
         /// </summary>
-        public ModelPipesFactory(int _x, int _y, Model _parent, int _size) 
-        { 
-            x = _x; 
-            y = _y; 
-            parent = _parent;
-            size = _size;
+        public ModelPipesFactory(int x, int y, int width, int height, Model parent, int _gameObjectsSize) : base(x, y, width, height, parent)
+        {
+            gameObjectsSize = _gameObjectsSize;
             rand = new Random(); 
         }
 
@@ -50,13 +35,13 @@ namespace Model.Objects.Factories
         /// </summary>
         public ModelPipe CreatePipe()
         {
-            int countY = (int)(parent.Height / size);
-            if (countY * size + size > parent.Height) countY--;
+            int countY = (int)(Parent.Height / gameObjectsSize);
+            if (countY * gameObjectsSize + gameObjectsSize > Parent.Height) countY--;
             ModelPipe pipe = new ModelPipe(
-                x, y, size, (countY * size) - y * 3, parent, 
-                (int)(rand.Next(y, parent.Height - y * 2) / size)
+                X, Y, gameObjectsSize, (countY * gameObjectsSize) - Y * 3, Parent, 
+                (int)(rand.Next(Y, Parent.Height - Y * 2) / gameObjectsSize)
                 );
-            pipe.Step = size;
+            pipe.Step = gameObjectsSize;
             return pipe;
         }
     }

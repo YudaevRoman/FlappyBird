@@ -26,3 +26,17 @@ C:\Users\Leere\Desktop\FlappyBird\Base\Controller\obj\Debug\Controller.csproj.Co
 C:\Users\Leere\Desktop\FlappyBird\Base\Controller\obj\Debug\Controller.csproj.CopyComplete
 C:\Users\Leere\Desktop\FlappyBird\Base\Controller\obj\Debug\Controller.dll
 C:\Users\Leere\Desktop\FlappyBird\Base\Controller\obj\Debug\Controller.pdb
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\Controller.dll.config
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\Controller.dll
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\Controller.pdb
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\Model.dll
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\View.dll
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\Model.pdb
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\Model.dll.config
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\View.pdb
+C:\FlappyBird\FlappyBird\Base\Controller\bin\Debug\View.dll.config
+C:\FlappyBird\FlappyBird\Base\Controller\obj\Debug\Controller.csproj.AssemblyReference.cache
+C:\FlappyBird\FlappyBird\Base\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+C:\FlappyBird\FlappyBird\Base\Controller\obj\Debug\Controller.csproj.CopyComplete
+C:\FlappyBird\FlappyBird\Base\Controller\obj\Debug\Controller.dll
+C:\FlappyBird\FlappyBird\Base\Controller\obj\Debug\Controller.pdb

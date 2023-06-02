@@ -23,6 +23,10 @@ namespace FormController
         /// Нажатие клавиши в пункте меню
         /// </summary>
         public event KeyEventHandler KeyDownItem;
+        /// <summary>
+        /// Отслеживание ввода символов
+        /// </summary>
+        public event KeyPressEventHandler KeyPressItem;
 
         //Поля
         /// <summary>
@@ -64,16 +68,18 @@ namespace FormController
                         FormControllerGame gameController = new FormControllerGame(game, new FormViewGame(game));
                         KeyDownItem += gameController.OnKey;
                         bool isGameOver = false;
-                        gameController.GameOver += new dEventHandler(() =>
+                        game.GameOver += new ModelGame.dEventHandler(() =>
                         {
                             isGameOver = true;
                             KeyDownItem -= gameController.OnKey;
-                            ModelGameOver gameOver = new ModelGameOver(0, 0, model.Parent.Width - 3, model.Parent.Height - 2, model.Parent, game.Score);
-                            FormControllerGameOver gameOverController = new FormControllerGameOver(gameOver, new FormViewGameOver(gameOver));
-                            KeyDownItem += gameOverController.OnKey;
+                            ModelGameOver gameOver = new ModelGameOver(0, 0, 
+                                model.Parent.Width - 3, model.Parent.Height - 2, model.Parent, game.Score);
+                            FormControllerGameOver gameOverController = new FormControllerGameOver(
+                                gameOver, new FormViewGameOver(gameOver));
+                            KeyPressItem += gameOverController.OnKey;
                             gameOverController.Close += new dEventHandler(() =>
                             {
-                                KeyDownItem -= gameOverController.OnKey;
+                                KeyPressItem -= gameOverController.OnKey;
                                 ItemClose?.Invoke();
                                 isGameOver = false;
                                 viewMenu.Start();
@@ -95,8 +101,10 @@ namespace FormController
                 modelMenu.Items.Add(
                     new ModelMenuItem(0, modelMenu.Items[i++].Y + height + offset, model.Width, height, model, RECORDS, () =>
                     {
-                        ModelRecords records = new ModelRecords(0, 0, model.Parent.Width - 2, model.Parent.Height - 2, model.Parent, 20);
-                        FormControllerRecords recordsController = new FormControllerRecords(records, new FormViewRecords(records));
+                        ModelRecords records = new ModelRecords(0, 0, model.Parent.Width - 2, model.Parent.Height - 2, 
+                            model.Parent, 20);
+                        FormControllerRecords recordsController = new FormControllerRecords(records, 
+                            new FormViewRecords(records));
                         KeyDownItem += recordsController.OnKey;
                         recordsController.Close += new dEventHandler(() =>
                         {
@@ -108,10 +116,12 @@ namespace FormController
                     }));
 
                 modelMenu.Items.Add(
-                    new ModelMenuItem(0, modelMenu.Items[i++].Y + height + offset, model.Width, height, model, INSTRUCTION, () =>
-                    {
-                        ModelInstruction instruction = new ModelInstruction(0, 0, model.Parent.Width - 2, model.Parent.Height - 2, model.Parent);
-                        FormControllerInstruction instructionController = new FormControllerInstruction(instruction, new FormViewInstruction(instruction));
+                    new ModelMenuItem(0, modelMenu.Items[i++].Y + height + offset, model.Width, height, model, INSTRUCTION, 
+                    () => {
+                        ModelInstruction instruction = new ModelInstruction(0, 0, model.Parent.Width - 2, 
+                            model.Parent.Height - 2, model.Parent);
+                        FormControllerInstruction instructionController = new FormControllerInstruction(instruction, 
+                            new FormViewInstruction(instruction));
                         KeyDownItem += instructionController.OnKey;
                         instructionController.Close += new dEventHandler(() =>
                         {
@@ -171,6 +181,10 @@ namespace FormController
         /// Метод передачи нажатых клавиш в пункты меню
         /// </summary>
         public void OnKeyDownItem(object sender, KeyEventArgs key) { KeyDownItem?.Invoke(sender, key); }
+        /// <summary>
+        /// Метод передачи символов в пункты меню
+        /// </summary>
+        public void OnKeyPressItem(object sender, KeyPressEventArgs key) { KeyPressItem?.Invoke(sender, key); }
         /// <summary>
         /// Получить сущность контроллера
         /// </summary>

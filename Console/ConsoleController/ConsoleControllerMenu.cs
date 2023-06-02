@@ -46,35 +46,35 @@ namespace ConsoleController
             if(model is ModelMenu modelMenu)
             {
                 int i = 0;
-                int height = (int)(model.Height * 0.1575), offset = (int)(model.Height * 0.075);
+                int height = (int)(modelMenu.Height * 0.1575), offset = (int)(modelMenu.Height * 0.075);
 
                 modelMenu.Items.Add(
-                    new ModelMenuItem(0, i, model.Width, height, model, PLAY, () =>
+                    new ModelMenuItem(0, i, modelMenu.Width, height, modelMenu, PLAY, () =>
                     {
-                        ModelGame _model_ = new ModelGame(2, 1, model.Parent.Width - 3, model.Parent.Height - 2, model.Parent, 1);
-                        ConsoleControllerGame controller = new ConsoleControllerGame(_model_, new ConsoleViewGame(_model_));
-                        controller.GameOver += new dEventHandler(() =>
+                        ModelGame modelGame = new ModelGame(2, 1, modelMenu.Parent.Width - 3, modelMenu.Parent.Height - 2, modelMenu.Parent, 1);
+                        ConsoleControllerGame controller = new ConsoleControllerGame(modelGame, new ConsoleViewGame(modelGame));
+                        modelGame.GameOver += new ModelGame.dEventHandler(() =>
                         {
-                            ModelGameOver __model_ = new ModelGameOver(2, 1, model.Parent.Width - 3, 1, model.Parent, _model_.Score);
-                            ConsoleControllerGameOver controllerGameOver = new ConsoleControllerGameOver(__model_, new ConsoleViewGameOver(__model_));
+                            ModelGameOver modelGameOver = new ModelGameOver(2, 1, modelMenu.Parent.Width - 3, 1, modelMenu.Parent, modelGame.Score);
+                            ConsoleControllerGameOver controllerGameOver = new ConsoleControllerGameOver(modelGameOver, new ConsoleViewGameOver(modelGameOver));
                             controllerGameOver.Start();
                         });
                         controller.Start();
                     }));
 
                 modelMenu.Items.Add(
-                    new ModelMenuItem(0, modelMenu.Items[i++].Y + height + offset, model.Width, height, model, RECORDS, () =>
+                    new ModelMenuItem(0, modelMenu.Items[i++].Y + height + offset, modelMenu.Width, height, modelMenu, RECORDS, () =>
                     {
-                        ModelRecords _model_ = new ModelRecords(2, 1, model.Parent.Width - 2, model.Parent.Height - 2, model.Parent, 1);
-                        ConsoleControllerRecords recordsConsole = new ConsoleControllerRecords(_model_, new ConsoleViewRecords(_model_));
+                        ModelRecords modelRecords = new ModelRecords(2, 1, modelMenu.Parent.Width - 2, modelMenu.Parent.Height - 2, modelMenu.Parent, 1);
+                        ConsoleControllerRecords recordsConsole = new ConsoleControllerRecords(modelRecords, new ConsoleViewRecords(modelRecords));
                         recordsConsole.Start();
                     }));
 
                 modelMenu.Items.Add(
-                    new ModelMenuItem(0, modelMenu.Items[i++].Y + height + offset, model.Width, height, model, INSTRUCTION, () =>
+                    new ModelMenuItem(0, modelMenu.Items[i++].Y + height + offset, modelMenu.Width, height, modelMenu, INSTRUCTION, () =>
                     {
-                        ModelInstruction _model_ = new ModelInstruction(2, 1, model.Parent.Width - 2, model.Parent.Height - 2, model.Parent);
-                        ConsoleControllerInstruction instructionConsole = new ConsoleControllerInstruction(_model_, new ConsoleViewInstruction(_model_));
+                        ModelInstruction modelInstruction = new ModelInstruction(2, 1, modelMenu.Parent.Width - 2, modelMenu.Parent.Height - 2, modelMenu.Parent);
+                        ConsoleControllerInstruction instructionConsole = new ConsoleControllerInstruction(modelInstruction, new ConsoleViewInstruction(modelInstruction));
                         instructionConsole.Start();
                     }));
 

@@ -124,7 +124,7 @@ namespace ConsoleView.Output
             [FieldOffset(2)] public short Attributes;
         }
         /// <summary>
-        /// Хранения области
+        /// Хранение области
         /// </summary>
         [StructLayout(LayoutKind.Sequential)]
         public struct SmallRect
@@ -221,6 +221,17 @@ namespace ConsoleView.Output
                   new Coord() { X = 0, Y = 0 },
                   ref rect);
             }
+        }
+        /// <summary>
+        /// Управление видимостью курсора консоли
+        /// </summary>
+        public static void CursorVisible(bool cursorVisible)
+        {
+            Console.CursorVisible = cursorVisible;
+        }
+        public static void SetCursorPosition(int left, int top)
+        {
+            Console.SetCursorPosition(left, top);
         }
     }
 }

@@ -95,7 +95,10 @@ namespace FormController
             {
                 if (!((ModelGame)model).GameOverCheck())
                 {
-                    if (((ModelGame)model).PipeCrossing()) lock (((ModelGame)model).Locker) ((ModelGame)model).Score = (Int32.Parse(((ModelGame)model).Score) + 1).ToString();
+                    if (((ModelGame)model).PipeCrossing()) {
+                        lock (((ModelGame)model).Locker) ((ModelGame)model).Score =
+                                (Int32.Parse(((ModelGame)model).Score) + 1).ToString();
+                    }
                     lock (((ModelGame)model).Locker) ((ModelGame)model).Bird.Move();
                     lock (((ModelGame)model).Locker) ((ModelGame)model).Pipes.ForEach(pipe => ((ModelPipe)pipe).Move());
                     lock (((ModelGame)model).Locker)
@@ -117,7 +120,8 @@ namespace FormController
         {
             while (isPlaying)
             {
-                lock (((ModelGame)model).Locker) ((ModelGame)model).Pipes.Add(((ModelGame)model).PipesFactory.CreatePipe());
+                lock (((ModelGame)model).Locker) 
+                    ((ModelGame)model).Pipes.Add(((ModelGame)model).PipesFactory.CreatePipe());
                 Thread.Sleep(FACTORY_TIMEOUT);
             }
         }
@@ -130,7 +134,6 @@ namespace FormController
             factoryThread.Abort();
             ((ViewThread)view).Stop();
             isPlaying = false;
-            OnGameOver();
         }
     }
 }

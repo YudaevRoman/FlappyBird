@@ -1,6 +1,7 @@
 ﻿using View;
 using System;
 using ConsoleView.Output;
+using Model;
 
 namespace ConsoleView
 {
@@ -22,10 +23,15 @@ namespace ConsoleView
         public override void Show()
         {
             ConsoleViewOutput.Clear();
-            ConsoleViewOutput.Write(text, model.GetFullX(), model.GetFullY(), model.Width, model.Height, ConsoleColor.Yellow);
-            ConsoleViewOutput.Write("Имя: ", model.GetFullX(), model.GetFullY() + model.Height, model.Width, 1, ConsoleColor.Yellow);
+            if (model is ModelGameOver modelGameOver)
+            {
+                ConsoleViewOutput.Write(modelGameOver.Text, model.GetFullX(), model.GetFullY(), model.Width, model.Height, ConsoleColor.Yellow);
+                ConsoleViewOutput.Write("Счёт: " + modelGameOver.Score, model.GetFullX(), model.GetFullY() + model.Height, model.Width, model.Height, ConsoleColor.Yellow);
+            }
+            ConsoleViewOutput.Write("Имя : ", model.GetFullX(), model.GetFullY() + (2 * model.Height), model.Width, model.Height, ConsoleColor.Yellow);
             ConsoleViewOutput.PrintOnConsole();
-            Console.SetCursorPosition(model.GetFullX() + 5, model.GetFullY() + model.Height);
+            ConsoleViewOutput.CursorVisible(true);
+            ConsoleViewOutput.SetCursorPosition(model.GetFullX() + 6, model.GetFullY() + (2 * model.Height));
         }
     }
 }

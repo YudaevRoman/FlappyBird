@@ -131,7 +131,6 @@ namespace ConsoleController
             factoryThread.Abort();
             ((ViewThread)view).Stop();
             isPlaying = false;
-            OnGameOver();
         }
     }
 }

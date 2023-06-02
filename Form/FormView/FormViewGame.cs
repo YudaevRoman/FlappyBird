@@ -3,8 +3,6 @@ using Model;
 using FormView.Output;
 using System.Threading;
 using FormView.Objects;
-using View.Objects.Enum;
-using FormView.Objects.Factories;
 
 namespace FormView
 {
@@ -33,11 +31,9 @@ namespace FormView
         {
             if (model is ModelGame modelGame)
             {
-                FormViewGameObjectsFactory viewFactory = new FormViewGameObjectsFactory();
-
-                FormViewPipe viewPipe = (FormViewPipe)viewFactory.CreateView(ViewType.PIPE, null);
-                FormViewBird viewBird = (FormViewBird)viewFactory.CreateView(ViewType.BIRD, modelGame.Bird);
-                FormViewWall viewWall = (FormViewWall)viewFactory.CreateView(ViewType.WALL, null);
+                FormViewPipe viewPipe = new FormViewPipe(null);
+                FormViewBird viewBird = new FormViewBird(modelGame.Bird);
+                FormViewWall viewWall = new FormViewWall(null);
 
                 FormViewGameScore viewScores = new FormViewGameScore(modelGame.GetModelScore());
 

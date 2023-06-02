@@ -49,7 +49,6 @@
     <Compile Include="FormViewMenuItem.cs" />
     <Compile Include="FormViewRecordLine.cs" />
     <Compile Include="FormViewRecords.cs" />
-    <Compile Include="Objects\Factories\FormViewGameObjectsFactory.cs" />
     <Compile Include="Objects\FormViewBird.cs" />
     <Compile Include="Objects\FormViewGameObject.cs" />
     <Compile Include="Objects\FormViewPipe.cs" />
@@ -81,6 +80,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -91,9 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Wall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Void.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

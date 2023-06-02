@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace FormView.Output
@@ -82,7 +81,8 @@ namespace FormView.Output
             form.Name = name;
             form.Text = name;
             form.Font = font;
-            lock (Locker) bufferedGraphics = BufferedGraphicsManager.Current.Allocate(form.CreateGraphics(), form.ClientRectangle);
+            lock (Locker) bufferedGraphics = BufferedGraphicsManager.Current.
+                    Allocate(form.CreateGraphics(), form.ClientRectangle);
         }
         /// <summary>
         /// Вывести строку в буфер
@@ -118,7 +118,8 @@ namespace FormView.Output
                 SizeNormaliz(x, y, ref _width, ref _height);
                 brush = new SolidBrush(color);
                 lock (Locker) bufferedGraphics.Graphics.FillRectangle(brush, new Rectangle(x, y, _width, _height));
-                lock (Locker) bufferedGraphics.Graphics.DrawString(str, font, Brushes.Black, new Rectangle(x, y, _width, _height), format);
+                lock (Locker) bufferedGraphics.Graphics.DrawString(str, font, 
+                    Brushes.Black, new Rectangle(x, y, _width, _height), format);
             }
         }
         /// <summary>

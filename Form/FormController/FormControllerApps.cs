@@ -32,14 +32,17 @@ namespace FormController
             {
                 viewApps.Show();
 
-                ModelMenu menu = new ModelMenu(0, 0, (int)(model.Width * 0.3), model.Height - (int)(model.Height * 0.5) - 2, model);
-                menu.Heading = new ModelMenuHeading((int)(model.Width * 0.33), 2, (int)(model.Width * 0.3), (int)(model.Height * 0.4), model);
+                ModelMenu menu = new ModelMenu(0, 0, (int)(model.Width * 0.3), 
+                    model.Height - (int)(model.Height * 0.5) - 2, model);
+                menu.Heading = new ModelMenuHeading((int)(model.Width * 0.33), 2, 
+                    (int)(model.Width * 0.3), (int)(model.Height * 0.4), model);
                 FormControllerMenu menuController = FormControllerMenu.GetInstance(menu);
 
                 FormViewOutput.Form.KeyDown += menuController.OnKey;
                 FormViewOutput.Form.FormClosing += menuController.ParentClose;
                 menuController.ItemClose += new dEventHandler(() =>
                 {
+                    FormViewOutput.Form.KeyPress -= menuController.OnKeyPressItem;
                     FormViewOutput.Form.KeyDown -= menuController.OnKeyDownItem;
                     FormViewOutput.Form.KeyDown += menuController.OnKey;
                 });
@@ -47,6 +50,7 @@ namespace FormController
                 {
                     FormViewOutput.Form.KeyDown -= menuController.OnKey;
                     FormViewOutput.Form.KeyDown += menuController.OnKeyDownItem;
+                    FormViewOutput.Form.KeyPress += menuController.OnKeyPressItem;
                 });
                 menuController.Close += new dEventHandler(() =>
                 {

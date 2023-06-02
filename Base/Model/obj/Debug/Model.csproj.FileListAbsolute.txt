@@ -16,3 +16,12 @@ C:\Users\Leere\Desktop\FlappyBird\Base\Model\obj\Debug\Model.csproj.GenerateReso
 C:\Users\Leere\Desktop\FlappyBird\Base\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\Leere\Desktop\FlappyBird\Base\Model\obj\Debug\Model.dll
 C:\Users\Leere\Desktop\FlappyBird\Base\Model\obj\Debug\Model.pdb
+C:\FlappyBird\FlappyBird\Base\Model\bin\Debug\Model.dll.config
+C:\FlappyBird\FlappyBird\Base\Model\bin\Debug\Model.dll
+C:\FlappyBird\FlappyBird\Base\Model\bin\Debug\Model.pdb
+C:\FlappyBird\FlappyBird\Base\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\FlappyBird\FlappyBird\Base\Model\obj\Debug\Model.Properties.Resources.resources
+C:\FlappyBird\FlappyBird\Base\Model\obj\Debug\Model.csproj.GenerateResource.cache
+C:\FlappyBird\FlappyBird\Base\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\FlappyBird\FlappyBird\Base\Model\obj\Debug\Model.dll
+C:\FlappyBird\FlappyBird\Base\Model\obj\Debug\Model.pdb

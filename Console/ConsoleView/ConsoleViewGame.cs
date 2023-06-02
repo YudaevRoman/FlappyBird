@@ -1,10 +1,8 @@
 ﻿using View;
 using Model;
 using System.Threading;
-using View.Objects.Enum;
 using ConsoleView.Output;
 using ConsoleView.Objects;
-using ConsoleView.Objects.Factories;
 
 namespace ConsoleView
 {
@@ -33,11 +31,9 @@ namespace ConsoleView
         {
             if(model is ModelGame modelGame)
             {
-                ConsoleViewGameObjectsFactory viewFactory = new ConsoleViewGameObjectsFactory();
-
-                ConsoleViewPipe viewPipe = (ConsoleViewPipe)viewFactory.CreateView(ViewType.PIPE, null);
-                ConsoleViewBird viewBird = (ConsoleViewBird)viewFactory.CreateView(ViewType.BIRD, modelGame.Bird);
-                ConsoleViewWall viewWall = (ConsoleViewWall)viewFactory.CreateView(ViewType.WALL, null);
+                ConsoleViewPipe viewPipe = new ConsoleViewPipe(null);
+                ConsoleViewBird viewBird = new ConsoleViewBird(modelGame.Bird);
+                ConsoleViewWall viewWall = new ConsoleViewWall(null); 
 
                 ConsoleViewGameScore viewScores = new ConsoleViewGameScore(modelGame.GetModelScore());
 
